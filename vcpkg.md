@@ -25,13 +25,12 @@ Make sure you are in the directory you want the tool installed to before doing t
 
 ## Step 3: Install packages used in OpenS100
 ```cmd
-> vcpkg install pugixml:x64-windows
-> vcpkg install geographiclib:x64-windows
-> vcpkg install polyclipping:x64-windows
-> vcpkg install HDF5:x64-windows
-> vcpkg install libxslt:x64-windows
-> vcpkg install websocketpp:x64-windows
-> vcpkg install curl:x64-windows
+> .\vcpkg install pugixml:x64-windows
+> .\vcpkg install geographiclib:x64-windows
+> .\vcpkg install polyclipping:x64-windows
+> .\vcpkg install HDF5:x64-windows
+> .\vcpkg install libxslt:x64-windows
+> .\vcpkg install ixwebsocket:x64-windows
 ```
 OpenS100 uses packages below.
 - pugixml 1.13.0
