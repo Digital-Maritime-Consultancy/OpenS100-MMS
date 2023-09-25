@@ -14,6 +14,12 @@
 
 #include "../PortrayalCatalogue/PortrayalCatalogue.h"
 
+#include "../MMSAgent/MMSAgent.h";
+
+#ifndef UUID_SYSTEM_GENERATOR
+#define UUID_SYSTEM_GENERATOR 1
+#endif // !UUID_SYSTEM_GENERATOR
+
 #define _CRTDBG_MAP_ALLOC
 #include <cstdlib>
 #include <crtdbg.h>
@@ -76,7 +82,11 @@ COpenS100App theApp;
 
 BOOL COpenS100App::InitInstance()
 {
-
+	MMSAgent mmsAgent("urn:mrn:mcp:agent", "ws://20.91.195.244:8888", [](MmtpMessage& message) {
+		if (message.responsemessage().response() == GOOD) {
+			std::cout << "We didn't fuck up";
+		}
+	});
 
 	GdiplusStartupInput GdiplusStartupInput;
 	if (::GdiplusStartup(&gdiplusToken, &GdiplusStartupInput, NULL) != Ok)
