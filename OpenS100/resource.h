@@ -121,6 +121,7 @@
 #define IDC_APPLY                       347
 #define IDD_DIALOG_CONFIG_4             348
 #define IDC_LIST_VIEWINGGROUP           349
+#define IDD_DIALOG_CONFIG_5             349
 #define IDC_BUTTON1                     350
 #define IDC_BUTTON_CHECK                350
 #define IDC_TWO_SHADE                   351

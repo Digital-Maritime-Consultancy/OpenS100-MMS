@@ -136,6 +136,9 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	lstBasicCommands.AddTail(ID_SORTING_GROUPBYTYPE);
 
 	CMFCToolBar::SetBasicCommands(lstBasicCommands);
+
+	m_mmsAgent.connect("ws://20.91.195.244:8888");
+
 	return 0;
 }
 

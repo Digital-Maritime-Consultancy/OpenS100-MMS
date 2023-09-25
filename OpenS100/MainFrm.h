@@ -4,6 +4,7 @@
 #include "DockablePaneCurrentSelection.h"
 #include "DockablePaneRelation.h"
 #include "DockablePaneEditWindow.h"
+#include "MmsAgent.h"
 
 class CMainFrame : public CFrameWndEx
 {
@@ -27,6 +28,7 @@ protected:  // member that includes a control collection.
 	CMFCToolBar       m_wndToolBar;
 	CMFCStatusBar     m_wndStatusBar;
 	CMFCToolBarImages m_UserImages;
+	CMMSAgent		  m_mmsAgent;
 
 // generated message map function.
 protected:

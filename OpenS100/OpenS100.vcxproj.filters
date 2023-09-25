@@ -101,6 +101,11 @@
     <ClInclude Include="TestGISLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MmsAgent.h" />
+    <ClInclude Include="ConfigurationMMSAgent.h" />
+    <ClInclude Include="mmtp.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenS100.cpp">
@@ -170,6 +175,15 @@
       <Filter>Dialog</Filter>
     </ClCompile>
     <ClCompile Include="TestGISLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MmsAgent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigurationMMSAgent.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="mmtp.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -84,9 +84,11 @@ BOOL CConfigrationDlg::OnInitDialog()
 
 	CString    strOne = _T("Context Parameter");
 	CString    strS101 = _T("Features");
+	CString    strMmsAgent = _T("MMS Agent");
 
 	m_tab.InsertItem(1, strOne);
 	m_tab.InsertItem(2, strS101);
+	m_tab.InsertItem(3, strMmsAgent);
 
 	CRect r;
 	m_tab.GetWindowRect(&r);
@@ -102,6 +104,11 @@ BOOL CConfigrationDlg::OnInitDialog()
 	s101Tab.ShowWindow(SW_HIDE);
 	s101Tab.MoveWindow(5, 25, r.Width() - 10, r.Height() - 30);
 	s101Tab.m_pParent = this;
+
+	mmsAgentTab.Create(IDD_DIALOG_CONFIG_4, &m_tab);
+	mmsAgentTab.ShowWindow(SW_HIDE);
+	mmsAgentTab.MoveWindow(5, 25, r.Width() - 10, r.Height() - 30);
+	mmsAgentTab.m_pParent = this;
 
 	m_tab.SetCurSel(0);
 
@@ -123,7 +130,9 @@ void CConfigrationDlg::OnTcnSelchangeConfigTab(NMHDR *pNMHDR, LRESULT *pResult)
 	case 1:
 		s101Tab.ShowWindow(SW_SHOW);
 		break;
-
+	case 2:
+		mmsAgentTab.ShowWindow(SW_SHOW);
+		break;
 	}
 	*pResult = 0;
 }
@@ -141,7 +150,9 @@ void CConfigrationDlg::OnTcnSelchangingConfigTab(NMHDR *pNMHDR, LRESULT *pResult
 	case 1:
 		s101Tab.ShowWindow(SW_HIDE);
 		break;
-
+	case 2:
+		mmsAgentTab.ShowWindow(SW_HIDE);
+		break;
 	}
 	*pResult = 0;
 }

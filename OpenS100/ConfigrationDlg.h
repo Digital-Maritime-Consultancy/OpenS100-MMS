@@ -1,7 +1,7 @@
 #pragma once
 #include "Configuration_1.h"
 #include "Configuration_4.h"
-
+#include "ConfigurationMMSAgent.h"
 #include "../GeoMetryLibrary/ENCConfiguration.h"
 
 class CGISViewerView;
@@ -20,6 +20,7 @@ public:
 
 	CConfiguration_1 mainTab;
 	CConfiguration_4 s101Tab;
+	ConfigurationMMSAgent mmsAgentTab;
 	
 	CTabCtrl m_tab;
 
